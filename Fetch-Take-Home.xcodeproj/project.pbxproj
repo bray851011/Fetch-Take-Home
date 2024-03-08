@@ -66,12 +66,11 @@
 			children = (
 				2F6425E22B9A974F00CCE78A /* AppDelegate.swift */,
 				2F6425E42B9A974F00CCE78A /* SceneDelegate.swift */,
+				2F6425F02B9A975000CCE78A /* Info.plist */,
 				2F6425F82B9A979C00CCE78A /* Model */,
 				2F6425F72B9A978900CCE78A /* Controller */,
 				2F6425F62B9A978200CCE78A /* View */,
-				2F6425EB2B9A975000CCE78A /* Assets.xcassets */,
-				2F6425ED2B9A975000CCE78A /* LaunchScreen.storyboard */,
-				2F6425F02B9A975000CCE78A /* Info.plist */,
+				2FBBD4172B9B9C4B003FF876 /* Support */,
 			);
 			path = "Fetch-Take-Home";
 			sourceTree = "<group>";
@@ -101,6 +100,15 @@
 				2F6425FB2B9A9E1600CCE78A /* ItemManager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2FBBD4172B9B9C4B003FF876 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				2F6425EB2B9A975000CCE78A /* Assets.xcassets */,
+				2F6425ED2B9A975000CCE78A /* LaunchScreen.storyboard */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -7,12 +7,16 @@
 
 import Foundation
 
+/// A manager responsible for fetching, parsing, and processing items from a remote server.
 struct ItemManager {
+    
+    /// The URL string for the remote server that provides item data.
     let urlString = "https://fetch-hiring.s3.amazonaws.com/hiring.json"
     
+    /// Fetches items from the remote server and calls the completion handler with the fetched items.
+    ///
+    /// - Parameter completion: A closure that takes an array of `Item` as its argument and returns `Void`.
     func fetchItem(completion: @escaping ([Item]) -> Void) {
-//        print("Fetch data from: " + urlString)
-        
         var items = [Item]()
         
         // Create a URL
@@ -31,7 +35,6 @@ struct ItemManager {
                 if let safeData = data {
                     let decodedData = self.parseJSON(itemData: safeData)
                     items = self.getResult(items: decodedData)
-//                    print(items)
                     completion(items)
                 }
             }
@@ -40,13 +43,16 @@ struct ItemManager {
         }
     }
     
+    /// Parses JSON data into an array of `Item` objects.
+    ///
+    /// - Parameter itemData: The JSON data to be parsed.
+    /// - Returns: An array of `Item` objects parsed from the JSON data.
     func parseJSON(itemData: Data) -> [Item] {
         let decoder = JSONDecoder()
         
         do {
-            // In Item array
+            // Decode JSON data into an array of Item objects
             let decodedData = try decoder.decode([Item].self, from: itemData)
-//            print(decodedData[0])
             return decodedData
         } catch {
             print(error)
@@ -55,6 +61,11 @@ struct ItemManager {
     }
     
     
+    
+    /// Processes the items by grouping them by listId, sorting the groups by listId and then by name, and filter out items where name is blank or null.
+    ///
+    /// - Parameter items: An array of `Item` objects to be processed.
+    /// - Returns: An array of processed `Item` objects.
     func getResult(items: [Item]) -> [Item] {
         var result: [Item] = []
         

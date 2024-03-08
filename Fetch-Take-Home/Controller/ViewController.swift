@@ -7,9 +7,15 @@
 
 import UIKit
 
+/// A view controller that manages the display of items in a table view.
 class ViewController: UIViewController {
     
+    /// The manager responsible for fetching and managing items.
     var itemManager = ItemManager()
+    
+    /// An array of items to display in the table view.
+    ///
+    /// Setting this property triggers a reload of the table view on the main thread.
     var items: [Item] = [Item]() {
         didSet {
             DispatchQueue.main.async {
@@ -18,21 +24,25 @@ class ViewController: UIViewController {
         }
     }
     
+    /// The table view displaying the items.
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Configure table view
         tableView.dataSource = self
-        
         itemManager.fetchItem { fetchedItems in
             self.items = fetchedItems
         }
         tableView.register(UINib(nibName: "ItemCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
+        
     }
 
 
 }
+
+// MARK: - UITableViewDataSource
 
 extension ViewController: UITableViewDataSource {
 
