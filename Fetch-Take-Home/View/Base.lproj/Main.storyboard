@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,33 +13,33 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fetch_Take_Home" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3R4-vx-4YA">
-                                <rect key="frame" x="156" y="119" width="81" height="36"/>
+                                <rect key="frame" x="147" y="107" width="81" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RaO-fC-HhP">
-                                <rect key="frame" x="0.0" y="185" width="393" height="633"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RaO-fC-HhP">
+                                <rect key="frame" x="0.0" y="173" width="375" height="605"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="listId" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqL-p7-5SU">
-                                <rect key="frame" x="10" y="159" width="36" height="21"/>
+                                <rect key="frame" x="10" y="147" width="36" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edY-35-vyE">
-                                <rect key="frame" x="66" y="159" width="43" height="21"/>
+                                <rect key="frame" x="66" y="147" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2o8-QO-SSR">
-                                <rect key="frame" x="129" y="159" width="14" height="21"/>
+                                <rect key="frame" x="129" y="147" width="14" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -54,6 +54,7 @@
                             <constraint firstItem="3R4-vx-4YA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="H37-Td-bEk"/>
                             <constraint firstItem="3R4-vx-4YA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I7i-Dn-VF2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RaO-fC-HhP" secondAttribute="trailing" id="KJI-5r-NZ5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2o8-QO-SSR" secondAttribute="trailing" symbolic="YES" id="PdF-XX-b9o"/>
                             <constraint firstItem="RaO-fC-HhP" firstAttribute="top" secondItem="BqL-p7-5SU" secondAttribute="bottom" constant="5" id="QSL-7y-VgE"/>
                             <constraint firstItem="BqL-p7-5SU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ReA-h8-Df0"/>
                             <constraint firstItem="RaO-fC-HhP" firstAttribute="top" secondItem="3R4-vx-4YA" secondAttribute="bottom" constant="30" id="ZoQ-Ha-q71"/>
